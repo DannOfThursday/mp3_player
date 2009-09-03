@@ -4,14 +4,18 @@ Here's an mp3_player plugin for Rails.
 Check out http://handyrailstips.com/tips/7-playing-mp3-s-on-your-rails-site-with-mp3_player for more info
 
 To install:
-	script/plugin install git://github.com/GavinM/mp3_player.git
+	script/plugin install git://github.com/DannOfThursday/mp3_player.git
 
 To setup:
 	script/generate mp3_player [name of your mp3 directory]
 
-This adds 'player.swf' to <em>public/</em> and creates a new folder for storing all of your audio files.
+This adds 'player.swf' to <em>public/</em> directory.
 
 ==Example Usage
+
+script/generate mp3_player audio
+
+creates a new folder named "audio" within your project's <em>public</em> directory.
 
 To play an mp3 file found in _public/mp3s/mysong.mp3_ simply add <%= mp3_player("mp3s/mysong.mp3") %> to your view.
 
